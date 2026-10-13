@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-title>Blog Details</title>
+  <meta name="description" id="meta-description" content="" />
+  <meta name="keywords" id="meta-keywords" content="" />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Dynamic OG/Twitter -->
+  <meta property="og:title" id="og-title" content="" />
+  <meta property="og:description" id="og-description" content="" />
+  <meta property="og:image" id="og-image" content="" />
+  <meta property="og:type" content="article" />
+  <meta name="twitter:card" content="summary_large_image" />
+  
+  <link rel="canonical" href="" id="canonical" />
+  <link rel="preconnect" href="https://images.unsplash.com" />
+  
+  <style>
+ html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fff7ed;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("./image/logo1.png"); 
+  background-repeat: repeat;
+  background-size: 500px;
+  background-position: 0 0;
+  opacity: 0.06;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 25px 20px 40px;
+  position: relative;
+  z-index: 1;
+}
+
+#content {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.blog-header h1 {
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: #ea580c;
+  line-height: 1.3;
+}
+
+.subtitle {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #ea580c, #f97316, #fb923c, #fdba74);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 15px;
+}
+
+.fancy-line {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  height: 18px;
+  margin: 8px 0 20px;
+  overflow: hidden;
+}
+
+.fancy-line::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 2px;
+  transform: translateY(-50%);
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(234, 88, 12, 0.15) 10%,
+    rgba(249, 115, 22, 0.95) 25%,
+    rgba(251, 146, 60, 1) 50%,
+    rgba(249, 115, 22, 0.95) 75%,
+    rgba(234, 88, 12, 0.15) 90%,
+    transparent 100%);
+  filter: blur(0.2px);
+  border-radius: 999px;
+}
+
+.fancy-line::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -30%;
+  width: 30%;
+  height: 8px;
+  transform: translateY(-50%);
+  background: radial-gradient(circle, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.35) 35%, transparent 70%);
+  filter: blur(1px);
+  animation: sweep 2.6s linear infinite;
+}
+
+.fancy-line span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 180px;
+  height: 180px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle,
+    rgba(234, 88, 12, 0.28) 0%,
+    rgba(249, 115, 22, 0.14) 22%,
+    rgba(251, 146, 60, 0.06) 40%,
+    transparent 68%);
+  border-radius: 50%;
+  animation: pulseGlow 2.8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes sweep {
+  0% {
+    left: -30%;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    left: 110%;
+    opacity: 0;
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(0.85);
+    opacity: 0.55;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.08);
+    opacity: 1;
+  }
+}
+
+.description {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #7c2d12;
+  background: #fff1e6;
+  border-left: 5px solid #f97316;
+  padding: 15px 18px;
+  border-radius: 8px;
+  margin: 10px 0 25px;
+  font-style: italic;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.description strong {
+  color: #ea580c;
+  font-weight: 600;
+}
+
+.meta {
+  display: flex;
+  gap: 15px;
+  font-size: 14px;
+  color: #4b5563;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.meta span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+img {
+  width: 100%;
+  max-width: 1000px;
+  height: clamp(260px, 50vw, 500px);
+  display: block;
+  object-fit: cover;
+  border-radius: 12px;
+  margin: 20px 0 28px;
+}
+
+h2 {
+  color: #c2410c;
+  margin-top: 28px;
+  margin-bottom: 14px;
+  font-size: 22px;
+  line-height: 1.4;
+}
+
+p {
+  color: #374151;
+  line-height: 1.8;
+  font-size: 16px;
+  margin-bottom: 18px;
+}
+
+strong {
+  color: #ea580c;
+}
+
+.back {
+  display: inline-block;
+  margin-top: 20px;
+  color: #ea580c;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.back:hover {
+  color: #c2410c;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px 15px 30px;
+  }
+
+  #content {
+    max-width: 100%;
+  }
+
+  .blog-header h1 {
+    font-size: 24px;
+  }
+
+  .subtitle {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .meta {
+    gap: 10px;
+    font-size: 13px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  .description {
+    font-size: 15px;
+    padding: 12px 14px;
+  }
+}
+  </style>
+</head>
+<body>
+  <!-- NAVBAR (injected by loader.js) -->
+  <div id="navbar"></div>
+  <div class="container">
+    <div id="content"></div>
+  </div>
+
+  <script type="module">
+    import { blogs } from "./blog.js";
+    const urlParams=new URLSearchParams(window.location.search).get("slug");
+    const blog=blogs.find(b=>b.slug===urlParams);
+    const box=document.getElementById("content");
+    if(!blog){box.innerHTML="<h2>Blog Not Found</h2>";}else{
+      document.title=blog.title;
+      document.getElementById("meta-description").content=blog.description;
+      document.getElementById("meta-keywords").content=blog.keywords;
+      document.getElementById("og-title").content=blog.title;
+      document.getElementById("og-description").content=blog.description;
+      document.getElementById("og-image").content=blog.image;
+      document.getElementById("canonical").href=`https://yourdomain.com/blog.html?slug=${blog.slug}`;
+      
+      function boldMatchedKeywords(text, keywords) {
+        const keywordList = keywords
+          .split(",")
+          .map(word => word.trim().toLowerCase())
+          .filter(Boolean)
+          .sort((a, b) => b.length - a.length);
+
+        let result = text;
+
+        keywordList.forEach(word => {
+          const escaped = word.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+          // 🔥 FIX: remove strict \b for multi-word matching
+          const regex = new RegExp(`(${escaped})`, "gi");
+
+          result = result.replace(regex, "<strong>$1</strong>");
+        });
+
+        return result.replace(/\n/g, "<br>");
+      }
+      
+      // Article Schema
+      const schema={
+        "@context":"https://schema.org",
+        "@type":"BlogPosting",
+        "headline":blog.title,
+        "description":blog.description,
+        "image":blog.image,
+        "author":"Profenaa Experts",
+        "datePublished":blog.date,
+        "publisher":{"@type":"Organization","name":"Profenaa Technologies"}
+      };
+      const schemaScript=document.createElement("script");
+      schemaScript.type="application/ld+json";
+      schemaScript.text=JSON.stringify(schema);
+      document.head.appendChild(schemaScript);
+      
+      box.innerHTML=`
+        <div class="blog-header">
+          <h1>${blog.title}</h1>
+          <div class="subtitle">BEST KIDS Pre School and DayCARE CENTER IN COIMBATORE</div>
+          <div class="fancy-line" aria-hidden="true">
+            <span></span>
+          </div>
+          <div class="meta">
+            <span>📅 ${blog.date}</span>
+            <span>👤 by Getzz Ready Kidzz School</span>
+          </div>
+        </div>
+        <img src="${blog.image}" alt="${blog.title}" loading="lazy" />
+        <br/>
+        <p class="description"><em>${blog.description}</em></p>
+        ${blog.content.map(item=>`<h2>${item.heading}</h2><p>${boldMatchedKeywords(item.text,blog.keywords)}</p>`).join("")}
+        <a class="back" href="index.html">← Back to Articles</a>`;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Contact Us</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="contactus.css"/>
+<link rel="stylesheet" href="style.css"/>
+<link rel="stylesheet" href="navbar.css"/>
+</head>
+<body>
+    <!-- NAVBAR -->
+  <div id="navbar"></div>
+
+<section class="contact-hero">
+  <div class="blob-left"></div>
+  <div class="blob-right"></div>
+  <div class="blob-mid"></div>
+
+  <div class="hero-content">
+    <h1>Contact <span>Us</span></h1>
+    <div class="breadcrumb">
+      <span><a href="index.html">Home</a></span>
+      <span class="sep">›</span>
+      <span class="current">Contact Us</span>
+    </div>
+  </div>
+</section>
+<div class="bg-blobs">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+</div>
+
+<div class="page">
+  <div class="contact-wrap">
+
+    <!-- LEFT -->
+    <div class="left-side">
+      <div class="tag">📬 Get In Touch</div>
+      <h1>Let's <span>Connect</span><br>With Us!</h1>
+      <p class="tagline">We're here to guide you through the best programs for your little one. Reach out anytime!</p>
+<div class="panda-bg">
+  <img src="assets/panda-hi.jpg" alt="">
+</div>
+      <div class="info-card">
+        <div class="info-icon">📞</div>
+        <div class="info-text">
+          <strong>Phone</strong>
+          +91 86086 92161
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-icon">📧</div>
+        <div class="info-text">
+          <strong>Email</strong>
+          <a href="mailto:kidsschoolprofenaa@gmail.com">kidsschoolprofenaa@gmail.com</a>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-icon">⏰</div>
+        <div class="info-text">
+          <strong>Hours</strong>
+          7:00 AM – 9:00 PM | Monday – Saturday
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-icon">📍</div>
+        <div class="info-text">
+          <strong>Address</strong>
+              21/3, Chetty St, Ayyappa Nagar, Ashok Nagar, Balaji Avenue, Selvapuram South, Coimbatore, Tamil Nadu 641001
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT — PANDA -->
+    <div class="right-side">
+      <div class="panda-wrap">
+        <div class="ear-inner-l"></div>
+        <div class="ear-inner-r"></div>
+
+        <div class="panda-body-card">
+          <div class="panda-eyes">
+            <div class="panda-eye-patch"><div class="panda-pupil"></div></div>
+            <div class="panda-eye-patch"><div class="panda-pupil"></div></div>
+          </div>
+
+          <div class="panda-nose"><span></span></div>
+
+          <div class="form-title">✉️ Send a Message</div>
+
+          <form class="panda-form" id="contactForm">
+            <select required>
+              <option value="" disabled selected>🎓 Select a Program</option>
+              <option>Play Group</option>
+              <option>Day Care</option>
+              <option>Nursery</option>
+              <option>Junior KG</option>
+              <option>Senior KG</option>
+            </select>
+
+            <div class="form-row">
+              <input type="text" placeholder="👤 Your Name" required/>
+              <input type="text" placeholder="🎂 Child's Age" required/>
+            </div>
+
+            <div class="form-row">
+              <input type="email" placeholder="📧 Email" required/>
+              <input type="tel" placeholder="📱 Phone" required/>
+            </div>
+
+            <textarea placeholder="💬 Write your message…" required></textarea>
+            <button class="send-btn" type="submit">🚀 Send Message</button>
+          </form>
+
+          <!-- ✨ WHITE BOX SUCCESS MESSAGE -->
+          <div class="success-message" id="successMsg">
+            <div class="checkmark">✅</div>
+            <h3>Message Sent Successfully!</h3>
+            <p>Thank you for reaching out! We'll get back to you within 24 hours. 🐼</p>
+          </div>
+
+          <div class="panda-tummy"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<section class="map-section">
+
+  <div class="map-container">
+    
+    <iframe 
+      src="https://www.google.com/maps?q=21/3,Chetty%20St,Ayyappa%20Nagar,Ashok%20Nagar,Balaji%20Avenue,Selvapuram%20South,Coimbatore,Tamil%20Nadu%20641001&output=embed"
+      allowfullscreen=""
+      loading="lazy">
+    </iframe>
+
+  </div>
+
+</section>
+
+    <!-- FOOTER -->
+  <div id="footer"></div>
+
+
+  <!-- ============================================================
+       ONE SCRIPT — handles navbar, footer, slider, dropdowns
+  ============================================================ -->
+  <script src="loader.js"></script>
+</body>
+</html>
